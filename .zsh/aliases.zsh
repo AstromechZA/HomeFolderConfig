@@ -1,4 +1,9 @@
 # -------------------------------------------------------------------
+# allow sudo to run aliases
+# -------------------------------------------------------------------
+alias sudo='sudo '
+
+# -------------------------------------------------------------------
 # use nocorrect alias to prevent auto correct from "fixing" these
 # -------------------------------------------------------------------
 #alias foobar='nocorrect foobar'
@@ -31,3 +36,8 @@ alias fcat='< ~/.zsh/functions.zsh'
 alias sz='source ~/.zshrc'
 
 alias rb='irb'
+
+# some port/network aliases
+alias showopentcp='lsof -iTCP'
+alias showlisteningtcp='lsof -i -sTCP:LISTEN'
+alias showlisteningudp='lsof -iUDP'
