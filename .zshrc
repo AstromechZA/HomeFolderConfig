@@ -1,5 +1,9 @@
+# .zshrc 
+
+# Note: If you want to modify the $PATH or run commands 
+# that add executables to the path, do it in the .zshenv
+
 # source in all the subconfigs
-# modify the PATH variable in .zshenv
 source ~/.zsh/colours.zsh
 source ~/.zsh/setopt.zsh
 source ~/.zsh/exports.zsh
