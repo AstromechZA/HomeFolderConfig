@@ -1,3 +1,24 @@
 [user]
 	name = Ben Meier
 	email = benmeier42@gmail.com
+[push]
+	default = simple
+[alias]
+	# smarter status - include tag and branch info
+	st = status -sb         
+
+	# I know what you did yesterday - great for follow-ups
+	fup = log --since '1 day ago' --oneline --author benmeier42@gmail.com
+
+	# pretty one-line log with tags, branches and authors
+	ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short  
+
+	# diff commands
+	diff = diff --word-diff
+	dc = diff --cached
+	ds = diff --staged
+
+	# stash shortcuts
+	sl = stash list
+	sa = stash apply
+	ss = stash save
