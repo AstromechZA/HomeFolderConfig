@@ -1,6 +1,6 @@
 [user]
 	name = Ben Meier
-	email = benmeier42@gmail.com
+	email = benmeier@fastmail.com
 [push]
 	default = simple
 [alias]
@@ -8,7 +8,7 @@
 	st = status -sb         
 
 	# I know what you did yesterday - great for follow-ups
-	fup = log --since '1 day ago' --oneline --author benmeier42@gmail.com
+	fup = log --since '1 day ago' --oneline --author benmeier@fastmail.com
 
 	# pretty one-line log with tags, branches and authors
 	ls = log --pretty=format:'%C(yellow)%h %C(blue)%ad%C(red)%d %C(reset)%s%C(green) [%cn]' --decorate --date=short  
