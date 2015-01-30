@@ -1,0 +1,3 @@
+include /usr/share/nano/python.nanorc                                                │     Shift-F12                    Toggle on/off Byobu's keybindings
+include /usr/share/nano/sh.nanorc
+include /usr/share/nano/java.nanorc
