@@ -1,0 +1,55 @@
+#!/usr/bin/env python
+
+print """
+   \033[31mF1\033[39m                             * Used by X11 *
+     \033[30;1mShift-F1\033[39;22m                      Display this help
+
+   \033[31mF2\033[39m                              Create a new window
+     \033[30;1mShift-F2\033[39;22m                     Create a horizontal split
+     \033[30;1mCtrl-F2\033[39;22m                      Create a vertical split
+     \033[30;1mCtrl-Shift-F2\033[39;22m                Create a new session
+
+   \033[31mF3/F4\033[39m                           Move focus among windows
+     \033[30;1mAlt-Left/Right\033[39;22m               Move focus among windows
+     \033[30;1mAlt-Up/Down\033[39;22m                  Move focus among sessions
+     \033[30;1mShift-Left/Right/Up/Down\033[39;22m     Move focus among splits
+     \033[30;1mShift-F3/F4\033[39;22m                  Move focus among splits
+     \033[30;1mCtrl-F3/F4\033[39;22m                   Move a split
+     \033[30;1mCtrl-Shift-F3/F4\033[39;22m             Move a window
+     \033[30;1mShift-Alt-Left/Right/Up/Down\033[39;22m Resize a split
+
+   \033[31mF5\033[39m                              Reload profile, refresh status
+     \033[30;1mAlt-F5\033[39;22m                       Toggle UTF-8 support, refresh status
+     \033[30;1mShift-F5\033[39;22m                     Toggle through status lines
+     \033[30;1mCtrl-F5\033[39;22m                      Reconnect ssh/gpg/dbus sockets
+     \033[30;1mCtrl-Shift-F5\033[39;22m                Change status bar's color randomly
+
+   \033[31mF6\033[39m                              Detach session and then logout
+     \033[30;1mShift-F6\033[39;22m                     Detach session and do not logout
+     \033[30;1mAlt-F6\033[39;22m                       Detach all clients but yourself
+     \033[30;1mCtrl-F6\033[39;22m                      Kill split in focus
+
+   \033[31mF7\033[39m                              Enter scrollback history
+     \033[30;1mAlt-PageUp/PageDown\033[39;22m          Enter and move through scrollback
+     \033[30;1mShift-F7\033[39;22m                     Save history to $BYOBU_RUN_DIR/printscreen
+
+   \033[31mF8\033[39m                              Rename the current window
+     \033[30;1mCtrl-F8\033[39;22m                      Rename the current session
+     \033[30;1mShift-F8\033[39;22m                     Toggle through split arrangements
+     \033[30;1mAlt-Shift-F8\033[39;22m                 Restore a split-pane layout
+     \033[30;1mCtrl-Shift-F8\033[39;22m                Save the current split-pane layout
+
+   \033[31mF9\033[39m                              Launch byobu-config window
+     \033[30;1mCtrl-F9\033[39;22m                      Enter command and run in all windows
+     \033[30;1mShift-F9\033[39;22m                     Enter command and run in all splits
+
+   \033[31mF11\033[39m                             * Used by X11 *
+     \033[30;1mAlt-F11\033[39;22m                      Expand split to a full window
+     \033[30;1mShift-F11\033[39;22m                    Zoom into a split, zoom out of a split
+     \033[30;1mCtrl-F11\033[39;22m                     Join window into a vertical split
+
+   \033[31mF12\033[39m                             Escape sequence
+     \033[30;1mShift-F12\033[39;22m                    Toggle on/off Byobu's keybindings
+     \033[30;1mAlt-F12\033[39;22m                      Toggle on/off Byobu's mouse support
+     \033[30;1mCtrl-Shift-F12\033[39;22m               Mondrian squares
+"""
