@@ -1,0 +1,40 @@
+#!/usr/bin/env python
+
+import os
+import re
+import argparse
+import sys
+
+USR_LIB_PATH = '/usr/lib'
+DIR_RE = re.compile(r'^go-\d+\.\d+$')
+GO_INSTALL_DIRS = [
+    d for d in os.listdir(USR_LIB_PATH) if (
+        DIR_RE.match(d) and
+        os.path.isdir(os.path.join(USR_LIB_PATH, d))
+    )
+]
+GO_VERSIONS = {d[3:]: os.path.join(USR_LIB_PATH, d) for d in GO_INSTALL_DIRS}
+print >> sys.stderr, "Identified {} go versions: {}".format(len(GO_VERSIONS), GO_VERSIONS.keys())
+
+p = argparse.ArgumentParser()
+p.add_argument('version', choices=GO_VERSIONS.keys())
+p.add_argument('dir', nargs='?', default='.')
+ns = p.parse_args()
+
+workdir = os.path.abspath(ns.dir)
+if not os.path.isdir(workdir):
+    print >> sys.stderr, "Directory {} does not exist!".format(workdir)
+    sys.exit(1)
+
+print >> sys.stderr, "Ensuring go workspace directories in {}".format(workdir)
+for d in ['bin', 'src', 'pkg']:
+    d = os.path.join(workdir, d)
+    if not os.path.isdir(d):
+        print >> sys.stderr, "Creating {}".format(d)
+        os.mkdir(d)
+
+print >> sys.stderr, "Setting up go workspace in {}".format(workdir)
+
+print 'export GOPATH="{}"'.format(workdir)
+print 'export GOBIN="{}"'.format(os.path.join(workdir, 'bin'))
+print 'export PATH={}:{}/bin'.format(os.environ.get('PATH'), GO_VERSIONS[ns.version])
