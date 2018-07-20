@@ -35,9 +35,10 @@ alias acat='< ~/.zsh/aliases.zsh'
 alias fcat='< ~/.zsh/functions.zsh'
 alias sz='source ~/.zshrc'
 
-alias rb='irb'
-
 # some port/network aliases
 alias showopentcp='lsof -iTCP'
 alias showlisteningtcp='lsof -i -sTCP:LISTEN'
 alias showlisteningudp='lsof -iUDP'
+
+# color fix
+alias grep='grep --color=auto'

@@ -1,8 +1,10 @@
 [user]
 	name = Ben Meier
 	email = benmeier@fastmail.com
+
 [push]
 	default = simple
+
 [alias]
 	# smarter status - include tag and branch info
 	st = status -sb         

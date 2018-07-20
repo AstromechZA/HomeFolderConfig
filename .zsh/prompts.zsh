@@ -83,4 +83,3 @@ function current_pwd {
 PROMPT='[${PR_RED}%n%{$reset_color%}${PR_BOLD_YELLOW}:%{$reset_color%}${PR_CYAN}$(box_name)%{$reset_color%} ${PR_YELLOW}$(current_pwd)%{$reset_color%} $(git_prompt_string)$(prompt_char) '
 
 export SPROMPT="Correct $fg[red]%R$reset_color to $fg[green]%r$reset_color [(y)es (n)o (a)bort (e)dit]? "
-
