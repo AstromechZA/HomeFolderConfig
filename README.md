@@ -7,7 +7,8 @@ Please don't use this, it's got my name baked in in various places.
 To install:
 
 ```
-$ cd ~
-$ git clone git@github.com:AstromechZA/HomeFolderConfig.git .
-$ rm -rf .git
+$ x=$(mktemp -d) && \
+    git clone git@github.com:AstromechZA/HomeFolderConfig.git "$x" && \
+    rm -rfv "$x/.git" && \
+    mv -v "$x"/* "$x"/.* ~ --no-clobber
 ```
